@@ -4,6 +4,6 @@ export interface IParticipant {
 }
 
 export const ROBIN = {
-  handle: 'Torch',
+  handle: 'Torch!',
   introductionText: 'Hallo Choom...',
 };

@@ -1,5 +1,5 @@
 <div class="h-full w-screen flex justify-center items-center">
-  <div class="h-5/6 w-5/6 bg-black p-12 rounded">
+  <div class="h-5/6 w-5/6 bg-black p-12 rounded overflow-auto">
     <div class="text-red-700">
       <markdown [data]="participant.handle"></markdown>
     </div>
@@ -48,16 +48,25 @@
       </app-accordion>
       <app-accordion header="Was muss ich mitbringen?"
         >Nichts. Ich werde alles einsteigerfreundlich erklären und bringe auch
-        vorgefertigte Charaktere mit.</app-accordion
-      >
-      <app-accordion header="Was kann ich mitbringen?">
+        vorgefertigte Charaktere mit. <br /><br
+      /></app-accordion>
+      <app-accordion header="Kann ich trotzdem etwas tun?">
         <ul>
-          <li>>Würfel: Einen W10 und fünf W6</li>
+          <li>>Würfel mitbringen: Einen W10 und fünf W6</li>
           <li>>Eigene Recherche in das Genre Cyberpunk</li>
-          <li>>Einen Blick ins Regelbuch</li>
-          <li>>Ideen für deinen Charakter</li>
+          <li>
+            >Einen Blick ins
+            <a
+              href="https://talsorianstore.com/collections/cyberpunk/products/cyberpunk-red"
+              target="_blank"
+            >
+              <b>Regelbuch</b>
+            </a>
+            werfen
+          </li>
+          <li>>Ideen für deinen Charakter ausenken</li>
         </ul>
-        <br /><br />
+        <br />
       </app-accordion>
       <app-accordion header="Welchen Charakter spiele ich?"
         >Entweder du spielst den gleichen Charakter wie beim letzten Mal, oder
@@ -67,11 +76,12 @@
         <a href="https://cyberpunkred.com/" target="_blank"
           ><b><u>Hier findest du einen Einstieg</u>.</b></a
         >
-        Schreib mir wenn du Zeit hast.
+        Schreib mir, wann du Zeit hast.
+        <br />
+        <br />
       </app-accordion>
       <app-accordion header="Wer steckt hinter dieser fantastischen Website?"
-        >Nichts. Ich werde alles einsteigerfreundlich erklären und bringe auch
-        vorgefertigte Charaktere mit.</app-accordion
+        >:^)</app-accordion
       >
     </div>
   </div>
