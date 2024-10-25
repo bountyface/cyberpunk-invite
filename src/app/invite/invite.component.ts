@@ -12,7 +12,12 @@ import { IParticipant, ROBIN } from '../data/participants';
   styleUrl: './invite.component.scss',
 })
 export class InviteComponent {
-  protected participant: IParticipant = { handle: '', introductionText: '' };
+  protected participant: IParticipant = {
+    handle: '',
+    introductionText: '',
+    password: '',
+    task: '',
+  };
 
   constructor() {
     this.participant = ROBIN;

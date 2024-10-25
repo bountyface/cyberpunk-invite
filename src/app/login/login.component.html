@@ -1,10 +1,23 @@
 <div class="h-full w-screen flex justify-center items-center">
   <div
     class="h-2/4 max-w-2/4 bg-black rounded overflow-auto flex justify-center flex-col p-36"
+    [ngClass]="{ 'shake-animation': !!errorMessage }"
   >
+    @if (errorMessage) {
+    <div class="text-red-700 mb-2">{{ errorMessage }}</div>
+    } @else {
     <div class="text-red-700 mb-2">Password eingeben...</div>
-    <input class="mb-2" (keyup.enter)="checkPassword()" type="password" />
-    <button class="border-solid border-2 border-sky-500" class="text-red-700">
+    }
+    <input
+      class="mb-4"
+      (keyup.enter)="checkPassword()"
+      type="password"
+      [(ngModel)]="password"
+    />
+    <button
+      class="text-red-700 border-dotted border-2 border-red-700 hover:text-black hover:bg-red-700 active:bg-red-900"
+      (click)="checkPassword()"
+    >
       Los
     </button>
   </div>
