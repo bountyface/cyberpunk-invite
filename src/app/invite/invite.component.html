@@ -1,9 +1,9 @@
 <div class="h-full w-screen flex justify-center items-center">
   <div class="h-5/6 w-5/6 bg-black p-12 rounded overflow-auto">
-    <div class="text-red-700">
+    <div class="text-red-700 text-2xl">
       <markdown [data]="participant.handle"></markdown>
     </div>
-    <div class="text-red-700">
+    <div class="text-red-700 mb-3">
       <markdown [data]="participant.introductionText"></markdown>
     </div>
     <div>
@@ -24,9 +24,9 @@
         <a
           href="https://talsorianstore.com/collections/cyberpunk/products/cyberpunk-red"
           target="_blank"
-          ><b>Cyberpunk RED</b></a
+          ><u><b>Cyberpunk RED</b></u></a
         >, ein Pen & Paper-Rollenspiel, das ungefähr 40 Jahre vor Cyberpunk 2077
-        stattfindet. <br /><br />
+        stattfindet.
       </app-accordion>
       <app-accordion header="Was bisher geschah...">
         Nach getaner Arbeit erfolgt die Bezahlung, nicht wahr? Doch der Deal ist
@@ -44,12 +44,11 @@
         verdammt guter Hackerin! Wir haben das Geld und Laslo, nur leider hat
         Placide von den Voodoo-Boys noch irgendetwas mit seinem Hirn gemacht.
         Der Arme Junge spricht nur noch in Werbeslogans...
-        <br /><br />
       </app-accordion>
       <app-accordion header="Was muss ich mitbringen?"
         >Nichts. Ich werde alles einsteigerfreundlich erklären und bringe auch
-        vorgefertigte Charaktere mit. <br /><br
-      /></app-accordion>
+        vorgefertigte Charaktere mit.</app-accordion
+      >
       <app-accordion header="Kann ich trotzdem etwas tun?">
         <ul>
           <li>>Würfel mitbringen: Einen W10 und ganz viele W6</li>
@@ -66,7 +65,6 @@
           </li>
           <li>>Ideen für deinen Charakter ausdenken</li>
         </ul>
-        <br />
       </app-accordion>
       <app-accordion header="Das Cyberpunk RED Regelbuch kostet ja Geld!"
         >Das stimmt. Aber dir wird bestimmt etwas einfallen, schließlich bist du
@@ -75,8 +73,8 @@
           href="https://www.drivethrurpg.com/de/product/409912/cyberpunk-red-easy-mode"
           target="_blank"
           ><b><u>Cyperpunk Easy Mode kostenlos herunter</u></b></a
-        >. Dort steht alles was du brauchst. <br /><br
-      /></app-accordion>
+        >. Dort steht alles was du brauchst.</app-accordion
+      >
       <app-accordion header="Welchen Charakter spiele ich?"
         >Entweder du spielst den gleichen Charakter wie beim letzten Mal, oder
         nimmst einen vorgefertigten von mir. <br /><br />
@@ -86,13 +84,12 @@
           ><b><u>Hier findest du einen Einstieg</u>.</b></a
         >
         Schreib mir, wann du Zeit hast.
-        <br />
-        <br />
       </app-accordion>
       <app-accordion header="Wer steckt hinter dieser fantastischen Website?"
         >:^)</app-accordion
       >
-      {{ participant.task }}
+
+      Geheimauftrag gefunden! {{ participant.task }}
     </div>
   </div>
 </div>

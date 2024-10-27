@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { AccordionComponent } from '../accordion/accordion.component';
-import { IParticipant, ROBIN } from '../data/participants';
+import { IParticipant } from '../data/participants';
+import { ParticipantService } from '../participant/participant.service';
 
 @Component({
   selector: 'app-invite',
@@ -19,7 +20,9 @@ export class InviteComponent {
     task: '',
   };
 
-  constructor() {
-    this.participant = ROBIN;
+  constructor(private _participantService: ParticipantService) {
+    if (this._participantService.activeParticipant) {
+      this.participant = this._participantService.activeParticipant;
+    }
   }
 }

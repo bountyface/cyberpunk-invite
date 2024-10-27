@@ -1,11 +1,13 @@
-<div
-  class="accordion"
-  [ngClass]="{ active: isOpen }"
-  (click)="onAccordionClick()"
->
-  <div class="text-lg font-medium text-red-700">{{ header }}</div>
-</div>
+<div class="mb-3">
+  <div
+    class="accordion"
+    [ngClass]="{ active: isOpen }"
+    (click)="onAccordionClick()"
+  >
+    <div class="text-lg font-medium text-red-700">{{ header }}</div>
+  </div>
 
-<div [@openClose]="isOpen ? 'open' : 'closed'" class="panel">
-  <div class="text-red-700"><ng-content></ng-content></div>
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="panel">
+    <div class="text-red-700"><ng-content></ng-content></div>
+  </div>
 </div>

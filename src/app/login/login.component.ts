@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 import { IParticipant, MICHA, ROBIN } from '../data/participants';
+import { ParticipantService } from '../participant/participant.service';
 
 @Component({
   selector: 'app-login',
@@ -22,13 +23,14 @@ export class LoginComponent {
 
   public constructor(
     private _router: Router,
-    private _authService: AuthService
+    private _authService: AuthService,
+    private _participantService: ParticipantService
   ) {}
 
   protected checkPassword(): void {
     for (const [key, value] of Object.entries(this.allParticipants)) {
       if (this.password === value.password) {
-        this.activeParticipant = this.allParticipants[key];
+        this._participantService.activeParticipant = this.allParticipants[key];
         // login
         this._authService.login();
         // redirect
