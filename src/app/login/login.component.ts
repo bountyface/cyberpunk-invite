@@ -29,7 +29,7 @@ export class LoginComponent {
 
   protected checkPassword(): void {
     for (const [key, value] of Object.entries(this.allParticipants)) {
-      if (this.password === value.password) {
+      if (this.password.toLowerCase() === value.password.toLowerCase()) {
         this._participantService.activeParticipant = this.allParticipants[key];
         // login
         this._authService.login();
