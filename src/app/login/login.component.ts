@@ -3,7 +3,15 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-import { IParticipant, MICHA, ROBIN } from '../data/participants';
+import {
+  ELKE,
+  IParticipant,
+  KRISTIAN,
+  LINDA,
+  MICHA,
+  ROBIN,
+  SASCHA,
+} from '../data/participants';
 import { ParticipantService } from '../participant/participant.service';
 
 @Component({
@@ -16,7 +24,14 @@ import { ParticipantService } from '../participant/participant.service';
 export class LoginComponent {
   protected password = '';
 
-  protected allParticipants: Record<string, IParticipant> = { ROBIN, MICHA };
+  protected allParticipants: Record<string, IParticipant> = {
+    ROBIN,
+    MICHA,
+    SASCHA,
+    KRISTIAN,
+    LINDA,
+    ELKE,
+  };
   protected activeParticipant?: IParticipant;
 
   protected errorMessage = '';
